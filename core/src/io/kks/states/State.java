@@ -86,6 +86,11 @@ public abstract class State {
 
     //region Methods implemented by every state
     /**
+     * Call when state is added to stack in StateHandler
+     */
+    public abstract void onCreate();
+
+    /**
      * Call to update state
      * @param dt Delta time
      */
@@ -100,11 +105,6 @@ public abstract class State {
      * Call when pausing state
      */
     public abstract void onPaused();
-
-    /**
-     * Call when state is added to stack in StateHandler
-     */
-    public abstract void onCreate();
 
     /**
      * Call when State is resuming from paused
