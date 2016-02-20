@@ -1,6 +1,7 @@
 package io.kks.handlers;
 
 import io.kks.states.State;
+import io.kks.states.Test;
 
 import java.util.Stack;
 
@@ -23,6 +24,7 @@ public class StateHandler {
      */
     private StateHandler() {
         stateStack = new Stack<State>();
+        pushState(new Test());
     }
 
     //region Update and Render calls
@@ -83,7 +85,7 @@ public class StateHandler {
      * @return Removed state
      */
     public State removeState(int index) {
-        if (stateStack.size() <= 1 || outOfBounds(index)) {
+        if (stateStack.size() < 1 || outOfBounds(index)) {
             return null;
         }
 
