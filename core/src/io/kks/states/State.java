@@ -2,8 +2,19 @@ package io.kks.states;
 
 public abstract class State {
 
+    // True if state is paused (don't update)
     private boolean paused;
+
+    // True if one can see the state
     private boolean visible;
+
+    /**
+     * Constructor makes the state default to visible and not paused.
+     */
+    public State() {
+        visible = true;
+        paused = false;
+    }
 
     //region Getters and Setters
     /**

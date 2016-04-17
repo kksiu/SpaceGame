@@ -56,7 +56,7 @@ public class Test extends State {
 
     @Override
     public void onRender() {
-        Gdx.app.log("HELLO", "TESTEESTS");
+
     }
 
     @Override
